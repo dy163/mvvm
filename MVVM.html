@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<div id="app">
+    <input type="text" v-model="message.val">
+    <div>{{ message.val }}</div>
+    <ul>
+        <li></li>
+    </ul>
+    {{ message.val }}
+</div>
+<script src="compile.js"></script>
+<script src="MVVM.js"></script>
+
+<body>
+    <script>
+        // 我们得数据一般都是挂载到vm上
+        // object(ie9得新增属性) 所以只是兼容到ie9
+        let vm = new MVVM({
+            el: '#app',
+            data: {
+                message: {
+                    val: 'word'
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

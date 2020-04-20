@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <input type="text" v-model="message">
+        <p>{{ message }}</p>
+    </div>
+    <script src="node_modules/vue/dist/vue.js"></script>
+    <script >
+        // 我们得数据一般都是挂载到vm上
+        // object.defindeprop(ie9得新增属性) 所以只是兼容到ie9
+        let vm = new Vue({
+            el: '#app',
+            data: {
+                message: 'howled word'
+            }
+        })
+    </script>
+</body>
+</html>
